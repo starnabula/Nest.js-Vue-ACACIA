@@ -2,6 +2,12 @@
 function fetchData() {
     return fetch('https://jsonplaceholder.typicode.com/posts/1')
     .then(response => response.json())
+    .then(data => {
+        console.log(data);
+        return fetch('https://jsonplaceholder.typicode.com/users/' + data.userId)
+    
+    })
+    .then(response => response.json())
     .then(data => console.log(data))
     .catch(error => console.error(error));
 }
