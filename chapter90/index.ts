@@ -1,6 +1,4 @@
 const persons = { name: 'John', age: 30 }
-
-// บรรทัดนี้คือ "ท่าไม้ตาย" ที่ถูกต้องในการวนลูป Object ใน TypeScript ครับ
 const keysw = Object.keys(persons) as Array<keyof typeof persons>;
 
 keysw.forEach((key) => {
