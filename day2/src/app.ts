@@ -29,7 +29,19 @@
 
 
 
-import { variabletype } from "./topics/variable_type"
-variabletype()
+// import { variabletype } from "./topics/variable_type"
+// variabletype()
+
+// import { interfaceandtype } from "./topics/interface_and_type";
+
+// interfaceandtype()
 
 
+// import { funciontype } from "./topics/funcion";
+
+// funciontype()
+
+
+import { classObject } from "./topics/class_object"
+
+classObject()
