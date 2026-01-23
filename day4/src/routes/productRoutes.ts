@@ -1,53 +1,19 @@
 
-import express  from 'express'
-import  { Request, Response } from 'express'
+import express from 'express'
+import * as ProductController from '../controllers/productControllers'
+import Product from './../models/productModel';
+
 
 const router = express.Router()
 
-interface product {
-    id: number
-    name: string
-    price: number
-}
+router.get('/Products', ProductController.getAllProducts)
 
-const products: product[] = []
+router.get('/Products/:id', ProductController.getProductById)
 
-router.get('/products', (_: Request, res: Response): void => {
-    res.json(products)
-})
+router.post('/Products', ProductController.createProduct)
 
-router.get('/products/:id', (req: Request<{ id: string }>, res: Response): void => {
-   // console.log(req.params.id)
-    const id = parseInt(req.params.id)
+router.put('/Products/:id', ProductController.updateProduct)
 
-    const product = products.find(product => product.id === id)
+router.delete('/Products/:id', ProductController.deleteProduct)
 
-
-
-    if (!product) {
-        res.status(404).json({ error: "Product not found" })
-        return
-    }
-
-    res.json(product)
-})
-
-router.post('/products', (req: Request, res: Response): void => {
-
-    if (!req.body) {
-        res.status(400).json({ error: 'Missing required fields: id, name, price' })
-        return
-    }
-
-    const { id, name, price } = req.body    
-
-    if (!id || !name || !price) {
-        res.status(400).json({ error: 'Missing required fields: id, name, price' })
-        return
-    }
-
-   
-})
-
-
-export default  router
+export default router
