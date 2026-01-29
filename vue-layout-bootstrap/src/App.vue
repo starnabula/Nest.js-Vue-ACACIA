@@ -1,6 +1,11 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import AppFooter from './components/AppFooter.vue'
+import AppMenu from './components/AppMenu.vue'
+</script>
 
 <template>
-  <div></div>
+  <AppMenu />
+  <router-view />
+  <AppFooter />
 </template>
 <style></style>
