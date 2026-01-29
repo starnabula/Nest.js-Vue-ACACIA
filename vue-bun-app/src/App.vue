@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { reactive, ref, computed } from 'vue'
 
-// --- ส่วนที่ 1: Logic เดิม ---
 const count = ref(0)
 const double = computed(() => count.value * 2)
 
@@ -17,7 +16,6 @@ const user = reactive({
   age: 25,
 })
 
-// --- ส่วนที่ 2: Logic ใหม่ ---
 const showChild = ref(true)
 const composableCount = ref(0)
 const inputValue = ref('')
@@ -83,7 +81,6 @@ const childInfo = reactive({
 </template>
 
 <style scoped>
-/* Reset และ Font พื้นฐาน */
 * {
   box-sizing: border-box;
 }
@@ -96,7 +93,6 @@ const childInfo = reactive({
   margin: 0 auto;
 }
 
-/* --- Style ของเดิม (Cards) --- */
 .card-container {
   display: flex;
   gap: 20px;
@@ -146,13 +142,11 @@ const childInfo = reactive({
   text-align: center;
 }
 
-/* --- เส้นคั่น --- */
 .divider {
   margin: 30px 0;
   border: 1px solid #ddd;
 }
 
-/* --- Style ของใหม่ (Dark Theme Section) --- */
 .new-feature-section {
   background-color: #1a1a1a;
   color: #ccc;
