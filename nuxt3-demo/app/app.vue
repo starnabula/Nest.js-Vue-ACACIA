@@ -16,8 +16,20 @@
       <NuxtLink to="/contact">Contact</NuxtLink>
     </li>
     <li>
-      <NuxtLink to="/users">Users</NuxtLink>
+      <NuxtLink to="/users/samit?type=admin&page=1">/Users/samit?type=admin&page=1</NuxtLink>
     </li>
+    <li>
+      <NuxtLink to="/members/admin/samit">/members/admin/samit</NuxtLink>
+    </li>
+<li>
+  <NuxtLink to="/category/programming">/Category/Programming</NuxtLink>
+</li>
+<li>
+  <NuxtLink to="/parent/child">/Parent/child</NuxtLink>  
+</li>
+<li>
+  <NuxtLink to="/parent/sister">/Parent/sister</NuxtLink>
+</li>
   </ul>
 </div>
   
@@ -27,7 +39,5 @@
 </main>
 </template>
 <style>
-.menu-link { color: #333; background-color: white; transition: all 0.2s; }
-.menu-link:hover { background-color: #f8f9fa; }
-.router-link-active { background-color: #212529 !important; color: white !important; border-color: #212529 !important; }
+
 </style>
