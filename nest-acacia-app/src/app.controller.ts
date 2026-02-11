@@ -6,6 +6,11 @@ export class AppController {
   constructor(private readonly appService: AppService) {}
 
   @Get()
+  getAPIHome(): string {
+    return 'the API Home!';
+  }
+
+  @Get()
   getHello(): string {
     return this.appService.getHello();
   }
